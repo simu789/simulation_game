@@ -1,2 +1,2 @@
 # simulation_game
-Select the "project" folder in "Create New Scene" to open the project.
+Select the "project" folder in "Create New Project" to open the project.
