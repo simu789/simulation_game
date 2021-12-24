@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://new_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://main.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 131079, 0, 0, 131082, 0, 0, 196611, 0, 0, 196614, 0, 0, 196617, 0, 0, 196620, 0, 0, 262148, 0, 0, 262152, 0, 0, 262155, 0, 0, 327687, 0, 0, 327690, 0, 0, 393221, 0, 0, 393224, 0, 0, 393229, 0, 0, 458759, 0, 0, 524294, 0, 0 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 225.0
+margin_top = 15.0
+margin_right = 370.0
+margin_bottom = 137.0
+text = "create"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 408.0
+margin_top = 19.0
+margin_right = 558.0
+margin_bottom = 132.0
+text = "stop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]
+[connection signal="mouse_entered" from="Button2" to="." method="_on_Button2_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="." method="_on_Button2_mouse_exited"]
